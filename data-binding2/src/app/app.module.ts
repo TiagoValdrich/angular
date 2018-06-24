@@ -9,6 +9,8 @@ import { ModalComponent } from './modal/modal.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
 import { MeuFormModule } from './meu-form/meu-form.module';
+import { InputOutputPropertiesComponent } from './input-output-properties/input-output-properties.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MeuFormModule } from './meu-form/meu-form.module';
     DataBindingComponent,
     ModalComponent,
     EventBindingComponent,
-    TwoWayDataBindingComponent
+    TwoWayDataBindingComponent,
+    InputOutputPropertiesComponent,
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,
