@@ -11,6 +11,7 @@ import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-
 import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputOutputPropertiesComponent } from './input-output-properties/input-output-properties.component';
 import { InputPropertyComponent } from './input-property/input-property.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InputPropertyComponent } from './input-property/input-property.componen
     EventBindingComponent,
     TwoWayDataBindingComponent,
     InputOutputPropertiesComponent,
-    InputPropertyComponent
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
