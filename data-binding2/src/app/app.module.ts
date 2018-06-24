@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './modal/modal.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    ModalComponent
+    ModalComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
