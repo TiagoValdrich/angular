@@ -1,7 +1,7 @@
 export default class Veiculo {
 
     protected modelo: string = '';
-    private velocidade: number = 0;
+    protected velocidade: number = 0;
     // private velocidade: number = 0 // Podemos instanciar os atributos de uma classe dessa forma, ou seja, fora do método construtor.
 
     public acelerar(): void {
