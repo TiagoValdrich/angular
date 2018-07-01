@@ -1,7 +1,7 @@
 import { InterfaceDAO } from "./InterfaceDAO";
 import Concessionaria from "./Concessionaria";
 
-export class ConcessionariaDAO implements InterfaceDAO {
+export class ConcessionariaDAO implements InterfaceDAO<Concessionaria> {
 
     nomeTabela: string = 'tb_concessionaria'
 

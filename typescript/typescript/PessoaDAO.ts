@@ -1,7 +1,7 @@
 import { InterfaceDAO } from './InterfaceDAO';
 import Pessoa from "./Pessoa";
 
-export class PessoaDAO implements InterfaceDAO {
+export class PessoaDAO implements InterfaceDAO<Pessoa> {
 
     nomeTabela:string = 'tb_pessoa'
 
