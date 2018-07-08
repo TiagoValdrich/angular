@@ -17,9 +17,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.ofertas = this.ofertasService.getOfertas()
-    console.log(this.ofertas)
+    //this.ofertas = this.ofertasService.getOfertas()
+    //console.log(this.ofertas)
 
+    this.ofertasService.getOfertas2()
+      .then(( ofertas: Oferta[] ) => {
+        console.log("a função resolve() foi resolvida após 3 seg.")
+        this.ofertas = ofertas 
+      })
+      .catch(( param: any ) => { 
+        console.log(param) 
+      })
   }
 
 }
