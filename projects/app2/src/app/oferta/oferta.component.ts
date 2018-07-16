@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from './../ofertas.service';
 import { Oferta } from './../shared/oferta.model';
@@ -23,6 +23,10 @@ export class OfertaComponent implements OnInit {
       .then((oferta: Oferta) => {
         this.oferta = oferta
       })
+  }
+
+  ngOnDestroy(){
+    
   }
 
 }
