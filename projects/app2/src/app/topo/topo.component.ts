@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OfertasService } from '../ofertas.service';
-import { Observable, Subject, of } from 'rxjs';
 import { Oferta } from '../shared/oferta.model';
+import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
 
 @Component({
@@ -13,6 +13,7 @@ import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/
 export class TopoComponent implements OnInit {
 
   public ofertas: Observable<Oferta[]>
+  public result: Oferta[]
   public subjectPesquisa: Subject<string> = new Subject<string>()
 
   constructor(
@@ -35,23 +36,20 @@ export class TopoComponent implements OnInit {
           return of<Oferta[]>([])
         }
       )
-    )    
-
-    this.ofertas.subscribe(
-      (ofertas: Oferta[]) => console.log(ofertas)
     )
+    
+    this.ofertas.subscribe((ofertas: Oferta[]) => {
+      return this.result = ofertas
+    })
 
   }
 
   public pesquisa = (termoDaBusca: string): void => {
     this.subjectPesquisa.next(termoDaBusca)
+  }
 
-    // this.ofertas = this.ofertasService.pesquisaOfertas(termoDaBusca)
-    // this.ofertas.subscribe(
-    //   (ofertas: Oferta[]) => console.log(ofertas),
-    //   (erro: any) => console.log('Erro status: ', erro.status),
-    //   () => console.log('Fluxo de Eventos completo!')
-    // )
+  public limpaPesquisa = (): void => {
+    this.subjectPesquisa.next('');
   }
 
 }
