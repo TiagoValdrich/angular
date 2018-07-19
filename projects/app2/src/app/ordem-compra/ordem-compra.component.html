@@ -127,7 +127,7 @@
           >
 
           <div *ngIf="complementoPristine == false">
-            <div *ngIf="complementoValido; else msgComplementoInvalido">
+            <div *ngIf="complementoValido">
               <small class="text-form text-success">Ok!</small>
             </div>
           </div>
@@ -166,7 +166,7 @@
       </div>
 
       <hr />
-      <button type="submit" class="btn btn-primary btn-lg">Cofirmar compra</button>
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="formEstado">Cofirmar compra</button>
     </form>
   </div>
 </div>
