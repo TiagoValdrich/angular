@@ -194,18 +194,25 @@
       "id": 1
     },
     {
-      "endereco": "teste",
+      "endereco": "budega",
       "numero": "1234",
-      "complemento": "casa",
+      "complemento": "aushauh",
       "formaPagamento": "dinheiro",
       "id": 2
     },
     {
-      "endereco": "Rua teste",
-      "numero": "1234",
-      "complemento": "teste",
-      "formaPagamento": "dinheiro",
+      "endereco": "alo rapazeada",
+      "numero": "551231",
+      "complemento": "aushasuhauha",
+      "formaPagamento": "debito",
       "id": 3
+    },
+    {
+      "endereco": "Rua Taubate",
+      "numero": "4567",
+      "complemento": "Casa",
+      "formaPagamento": "dinheiro",
+      "id": 4
     }
   ]
 }
