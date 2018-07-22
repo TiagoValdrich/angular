@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -38,6 +39,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
