@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { OrdemCompraService } from '../ordem-compra.service'
 import { Pedido } from '../shared/pedido.model'
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CarrinhoService } from '../carrinho.service';
+import { ItemCarrinho } from '../shared/item-carrinho.model';
 
 @Component({
   selector: 'app-ordem-compra',
@@ -12,6 +14,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class OrdemCompraComponent implements OnInit {
 
   @Input() public idPedidoCompra: number
+  public itensCarrinho: ItemCarrinho[] = []
 
   public formulario: FormGroup = new FormGroup({
 
@@ -22,14 +25,17 @@ export class OrdemCompraComponent implements OnInit {
 
   })
 
-  constructor(private ordemCompraService: OrdemCompraService) { }
+  constructor(
+    private ordemCompraService: OrdemCompraService,
+    public carrinhoService: CarrinhoService
+  ) { }
 
   ngOnInit() {
-    
+    this.itensCarrinho = this.carrinhoService.exibirItens()
   }
 
   public confirmarCompra(): void {
-    if(this.formulario.status === 'INVALID'){      
+    if(this.formulario.status === 'INVALID'){
       this.formulario.get('endereco').markAsTouched()
       this.formulario.get('numero').markAsTouched()
       this.formulario.get('complemento').markAsTouched()

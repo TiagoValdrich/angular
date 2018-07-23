@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { OfertasService } from './../ofertas.service';
+import { CarrinhoService } from './../carrinho.service';
+
 import { Oferta } from './../shared/oferta.model';
 
 @Component({
@@ -15,10 +17,13 @@ export class OfertaComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ofertasService: OfertasService
+    private ofertasService: OfertasService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
+
+    console.log(`Oferta - itens: ` + this.carrinhoService.exibirItens())
     
     this.route.params.subscribe((parametrosRota: Params) => {
 
@@ -33,6 +38,11 @@ export class OfertaComponent implements OnInit {
 
   ngOnDestroy(){
     
+  }
+
+  public adicionarItemCarrinho(): void {
+    this.carrinhoService.incluirItem(this.oferta)
+    console.log(this.carrinhoService.exibirItens())
   }
 
 }
