@@ -35,26 +35,45 @@ export class OrdemCompraComponent implements OnInit {
   }
 
   public confirmarCompra(): void {
+
     if(this.formulario.status === 'INVALID'){
+
       this.formulario.get('endereco').markAsTouched()
       this.formulario.get('numero').markAsTouched()
       this.formulario.get('complemento').markAsTouched()
       this.formulario.get('formaPagamento').markAsTouched()
+
     } else {
 
-      let pedido: Pedido = new Pedido(
-        this.formulario.value.endereco,
-        this.formulario.value.numero,
-        this.formulario.value.complemento,
-        this.formulario.value.formaPagamento
-      )
+      if(this.carrinhoService.exibirItens().length === 0) {
 
-      this.ordemCompraService.efetivarCompra(pedido)
-        .subscribe((idPedido: number) => {
-          this.idPedidoCompra = idPedido          
-        })
+        alert('Nenhum item foi selecionado')
 
+      } else {
+
+        let pedido: Pedido = new Pedido(
+          this.formulario.value.endereco,
+          this.formulario.value.numero,
+          this.formulario.value.complemento,
+          this.formulario.value.formaPagamento,
+          this.carrinhoService.exibirItens()
+        )
+
+        this.ordemCompraService.efetivarCompra(pedido)
+          .subscribe((idPedido: number) => {
+            this.idPedidoCompra = idPedido
+            this.carrinhoService.limparCarrinho()          
+          })
+      }
     }
+  }
+  
+  public adicionarQuantidade(item: ItemCarrinho): void {
+    this.carrinhoService.adicionarQuantidade(item)
+  }
+
+  public diminuirQuantidade(item: ItemCarrinho): void {
+    this.carrinhoService.diminuiQuantidade(item)
   }
 
 }

@@ -194,263 +194,82 @@
       "id": 1
     },
     {
-      "endereco": "budega",
-      "numero": "1234",
-      "complemento": "aushauh",
+      "endereco": "Rua Monsenhor Gercino",
+      "numero": "6677",
+      "complemento": "Casa",
       "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 1
+        },
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 1
+        },
+        {
+          "id": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "titulo": "Super Burger",
+          "descricao_oferta": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "valor": 29.9,
+          "quantidade": 2
+        },
+        {
+          "id": 2,
+          "img": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "titulo": "Cozinha Mexicana",
+          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "valor": 32.9,
+          "quantidade": 2
+        }
+      ],
       "id": 2
     },
     {
-      "endereco": "alo rapazeada",
-      "numero": "551231",
-      "complemento": "aushasuhauha",
-      "formaPagamento": "debito",
+      "endereco": "teste",
+      "numero": "1234",
+      "complemento": "casa",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "titulo": "Super Burger",
+          "descricao_oferta": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "valor": 29.9,
+          "quantidade": 1
+        },
+        {
+          "id": 2,
+          "img": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "titulo": "Cozinha Mexicana",
+          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "valor": 32.9,
+          "quantidade": 2
+        }
+      ],
       "id": 3
-    },
-    {
-      "endereco": "Rua Taubate",
-      "numero": "4567",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 4
-    },
-    {
-      "endereco": "Batata",
-      "numero": "1234",
-      "complemento": "Casa",
-      "formaPagamento": "debito",
-      "id": 5
-    },
-    {
-      "endereco": "Batata",
-      "numero": "1234",
-      "complemento": "Casa",
-      "formaPagamento": "debito",
-      "id": 6
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 7
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 8
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 9
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 10
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 11
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 12
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 13
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 14
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 15
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 16
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 17
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 18
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 19
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 20
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 21
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 22
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 23
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 24
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 25
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 26
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "debito",
-      "id": 27
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 28
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 29
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 30
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 31
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 32
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 33
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 34
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 35
-    },
-    {
-      "endereco": "Rua Batata",
-      "numero": "15978",
-      "complemento": "Casa",
-      "formaPagamento": "dinheiro",
-      "id": 36
-    },
-    {
-      "endereco": "Rua batatinhas",
-      "numero": "1234",
-      "complemento": "casa",
-      "formaPagamento": "dinheiro",
-      "id": 37
-    },
-    {
-      "endereco": "asuasuh",
-      "numero": "1234",
-      "complemento": "asuhasu",
-      "formaPagamento": "dinheiro",
-      "id": 38
     }
   ]
 }

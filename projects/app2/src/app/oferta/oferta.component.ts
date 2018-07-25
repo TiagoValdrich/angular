@@ -23,8 +23,6 @@ export class OfertaComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(`Oferta - itens: ` + this.carrinhoService.exibirItens())
-    
     this.route.params.subscribe((parametrosRota: Params) => {
 
       this.ofertasService.getOfertaById(parametrosRota.id)
@@ -42,7 +40,6 @@ export class OfertaComponent implements OnInit {
 
   public adicionarItemCarrinho(): void {
     this.carrinhoService.incluirItem(this.oferta)
-    console.log(this.carrinhoService.exibirItens())
   }
 
 }

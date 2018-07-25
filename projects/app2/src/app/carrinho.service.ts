@@ -44,4 +44,30 @@ export class CarrinhoService {
 
   }
 
+  public adicionarQuantidade(itemCarrinho: ItemCarrinho): void {
+
+    let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho) => item.id === itemCarrinho.id )
+
+    if(itemCarrinhoEncontrado) {
+      itemCarrinhoEncontrado.quantidade += 1
+    }
+  }
+
+  public diminuiQuantidade(itemCarrinho: ItemCarrinho): void {
+
+    let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho) => item.id === itemCarrinho.id)
+
+    if(itemCarrinhoEncontrado){
+      itemCarrinhoEncontrado.quantidade -= 1
+
+      if(itemCarrinhoEncontrado.quantidade === 0){
+        this.itens.splice(this.itens.indexOf(itemCarrinhoEncontrado), 1)
+      }
+    }
+  }
+
+  public limparCarrinho(): void {
+    this.itens = []
+  }
+
 }
