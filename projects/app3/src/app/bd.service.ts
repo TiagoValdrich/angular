@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 import { Progresso } from './progresso.service';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Injectable()
 export class Bd {
@@ -46,6 +47,7 @@ export class Bd {
         return new Promise((resolve, reject) => {
 
             firebase.database().ref(`publicacoes/${btoa(emailUsuario)}`)
+                .orderByKey()
                 .once('value')
                 .then((snapshot: any) => {
                     //console.log(snapshot.val())
@@ -53,11 +55,20 @@ export class Bd {
                     let publicacoes: Array<any> = []
 
                     snapshot.forEach((childSnapshot: any) => {
+                        
+                        let publicacao = childSnapshot.val()
+                        publicacao.key = childSnapshot.key
+                        publicacoes.push(publicacao)
 
-                        let publicacao: any = childSnapshot.val()
+                    })
 
+                    return publicacoes.reverse()
+                })
+                .then((publicacoes: any) => {
+
+                    publicacoes.forEach((publicacao) => {
                         firebase.storage().ref()
-                            .child(`imagens/${childSnapshot.key}`)
+                            .child(`imagens/${publicacao.key}`)
                             .getDownloadURL()
                             .then((url: string) => {
                                 publicacao.url_imagem = url
@@ -67,7 +78,6 @@ export class Bd {
                                     .then((snapshot: any)=> {
                                         
                                         publicacao.nome_usuario = snapshot.val().nome_usuario
-                                        publicacoes.push(publicacao)
                                     })                            
                             })
                     })

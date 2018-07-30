@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   public atualizarTimeLine(): void {
-    this.publicacoes.atualizarTimeLine()
+    this.publicacoes.atualizarTimeline()
   }
 
 }
